@@ -1,7 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const genreRouter = require('./genres.router')
+const actorRouter = require('./actors.router')
+const directorRouter = require('./directors.router'); 
+const movieRouter = require('./movies.router');
 
-// colocar las rutas aquí
+
+router.use(genreRouter)
+router.use(actorRouter)
+router.use(directorRouter)
+router.use(movieRouter)
+
+
+
+
 
 
 module.exports = router;
